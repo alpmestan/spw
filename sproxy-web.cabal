@@ -24,21 +24,23 @@ data-files:          static/css/*.min.css,
                      static/js/*.js
 
 library
-  exposed-modules: SProxy.Run
-  other-modules:       Config,
-                       DB,
-                       Entities,
-                       Handlers,
-                       Paths_sproxy_web,
-                       SproxyError,
-                       Views.Common,
-                       Views.DomainList,
-                       Views.DomainPrivileges,
-                       Views.ErrorPage,
-                       Views.GroupList,
-                       Views.Homepage,
-                       Views.MemberList,
-                       Views.PrivilegeRules
+  exposed-modules:
+    SProxy.Run,
+    Config,
+    DB,
+    Entities,
+    Handlers,
+    Paths_sproxy_web,
+    SproxyError,
+    Views.Common,
+    Views.DomainList,
+    Views.DomainPrivileges,
+    Views.ErrorPage,
+    Views.GroupList,
+    Views.Homepage,
+    Views.MemberList,
+    Views.PrivilegeRules,
+    Views.Search
   build-depends:       base >= 4.5,
                        text >= 0.11,
                        bytestring >= 0.10,
