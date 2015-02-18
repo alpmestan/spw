@@ -1,4 +1,4 @@
-postUrl = '/rename-user';
+postUrl = '/sproxy/rename-user';
 
 makeEditable('.email-edit', renameUser, postUrl);
 

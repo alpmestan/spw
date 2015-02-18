@@ -10,18 +10,19 @@ import SproxyError
 import Control.Monad.Trans
 import Data.Default.Class
 import Data.Pool
-import HFlags
 import Network.Wai
 import Network.Wai.Handler.Warp hiding (Connection)
 import Network.Wai.Middleware.RequestLogger
 import Network.Wai.Middleware.Static
 import Web.Scotty.Trans
+import System.Directory
+import System.FilePath
 import System.IO
 
 run :: IO Application
 run = do
-    _    <- $initHFlags "sproxy-web - Web interface to the sproxy permissions database"
-    config <- getConfig flags_config
+    cfgFile <- fmap (</> ".sproxy-web" <.> "cfg") getHomeDirectory
+    config <- getConfig cfgFile
     pool <- createDBPool (dbConnectionString config)
     scottyAppT id id (sproxyWeb (staticDir config) pool)
 

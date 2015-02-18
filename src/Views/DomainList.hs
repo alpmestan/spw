@@ -46,7 +46,7 @@ domainListT gs =
             "You left one of the fields empty."
 
         H.script ! A.type_ "text/javascript"
-                 ! A.src "/static/js/domainlist.js" $ mempty
+                 ! A.src "/sproxy/static/js/domainlist.js" $ mempty
 
     where domainToHtml d = do
               tr $ do

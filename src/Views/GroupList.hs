@@ -46,7 +46,7 @@ groupListT gs =
             "You left one of the fields empty."
     
         H.script ! A.type_ "text/javascript"
-                 ! A.src "/static/js/grouplist.js" $ mempty
+                 ! A.src "/sproxy/static/js/grouplist.js" $ mempty
 
     where groupToHtml gname = do
               tr $ do

@@ -1,4 +1,4 @@
-postUrl = '/domains';
+postUrl = '/sproxy/domains';
 
 makeEditable('.domain-edit', domainUpdate, postUrl);
 

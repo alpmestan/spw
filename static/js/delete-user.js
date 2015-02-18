@@ -1,4 +1,4 @@
-deleteUrl = '/delete-user';
+deleteUrl = '/sproxy/delete-user';
 
 function deleteUser(email, row, onSucc, onErr) {
 	$.post( deleteUrl

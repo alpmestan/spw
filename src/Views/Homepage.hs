@@ -29,4 +29,4 @@ homepageT =
             H.b $ "$5/month"
             "!"
 
-        H.script ! A.type_ "text/javascript" ! A.src "/static/js/up-there.js" $ mempty
+        H.script ! A.type_ "text/javascript" ! A.src "/sproxy/static/js/up-there.js" $ mempty

@@ -1,4 +1,4 @@
-postUrl = '/group/' + groupName + '/members';
+postUrl = '/sproxy/group/' + groupName + '/members';
 
 makeEditable('.member-edit', memberUpdate, postUrl);
 

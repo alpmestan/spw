@@ -1,4 +1,4 @@
-postUrl = '/domain/' + domain + '/privileges';
+postUrl = '/sproxy/domain/' + domain + '/privileges';
 
 makeEditable('.privilege-edit', privilegeUpdate, postUrl);
 

@@ -1,4 +1,4 @@
-var postUrl = '/domain/' + domain + '/privilege/' + privilege + '/rules';
+var postUrl = '/sproxy/domain/' + domain + '/privilege/' + privilege + '/rules';
 
 makeEditable('.path-edit', pathUpdate, postUrl);
 makeEditable('.method-edit', methodUpdate, postUrl);

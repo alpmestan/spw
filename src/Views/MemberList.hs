@@ -36,7 +36,7 @@ memberListT members groupName =
                     mapM_ memberToHtml members
                 H.tfoot $ do
                     H.tr $ do
-                        H.td $ inp "member" "%@zalora.com"
+                        H.td $ inp "member" "%@luxola.com"
                         H.td $ H.button ! A.class_ "btn btn-success btn-xs add-btn"
                                         $ "Add a member"
 
@@ -50,7 +50,7 @@ memberListT members groupName =
             "You left one of the fields empty."
 
         H.script ! A.type_ "text/javascript"
-                 ! A.src "/static/js/memberlist.js" $ mempty
+                 ! A.src "/sproxy/static/js/memberlist.js" $ mempty
 
     where memberToHtml m = do
               tr $ do

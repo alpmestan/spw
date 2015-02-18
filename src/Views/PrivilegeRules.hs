@@ -62,7 +62,7 @@ privilegeRulesT domain privilege rules =
                 "This value already exists"
 
         H.script ! A.type_ "text/javascript"
-                 ! A.src "/static/js/rules.js" $ mempty
+                 ! A.src "/sproxy/static/js/rules.js" $ mempty
 
     where ruleToHtml (path, method) = do
               tr $ do

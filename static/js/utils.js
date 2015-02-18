@@ -22,7 +22,7 @@ function makeEditable(cl, dataGetter, url) {
                 fadeInOut("#updateerror");
                 $(thisTd).text(prevValue);
             }
-        }, { indicator: '<img src="/static/loading.gif" />' }
+        }, { indicator: '<img src="/sproxy/static/loading.gif" />' }
         );
 
         edits[cl] = '';

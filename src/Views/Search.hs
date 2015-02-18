@@ -43,10 +43,10 @@ searchResultsT searchStr matchingMails =
             "An error occured when trying to update the email in the DB."
     
         H.script ! A.type_ "text/javascript"
-                    ! A.src "/static/js/delete-user.js" $ mempty
+                    ! A.src "/sproxy/static/js/delete-user.js" $ mempty
 
         H.script ! A.type_ "text/javascript"
-                    ! A.src "/static/js/rename-user.js" $ mempty
+                    ! A.src "/sproxy/static/js/rename-user.js" $ mempty
 
   where emailsHtml = mapM_ emailToHtml matchingMails
         emailToHtml (mail, groups) = 

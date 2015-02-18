@@ -29,19 +29,19 @@ pageT t cont = do
             H.title (toHtml t)
             meta ! A.name "viewport" ! content "width=device-width, initial-scale=1"
             --  Latest compiled and minified CSS 
-            link ! rel "stylesheet" ! href "/static/css/bootstrap.min.css"
+            link ! rel "stylesheet" ! href "/sproxy/static/css/bootstrap.min.css"
             --  Optional theme 
-            link ! rel "stylesheet" ! href "/static/css/bootstrap-theme.min.css"
+            link ! rel "stylesheet" ! href "/sproxy/static/css/bootstrap-theme.min.css"
             --  My own CSS file 
-            link ! rel "stylesheet" ! href "/static/css/style.css"
+            link ! rel "stylesheet" ! href "/sproxy/static/css/style.css"
             
             -- required js files
-            script ! A.type_ "text/javascript" ! src "/static/js/jquery.min.js" $ mempty
-            script ! A.type_ "text/javascript" ! src "/static/js/jquery.color.min.js" $ mempty
-            script ! A.type_ "text/javascript" ! src "/static/js/bootstrap.min.js" $ mempty
-            script ! A.type_ "text/javascript" ! src "/static/js/longtable.js" $ mempty
-            script ! A.type_ "text/javascript" ! src "/static/js/jquery.jeditable.min.js" $ mempty
-            script ! A.type_ "text/javascript" ! src "/static/js/utils.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/jquery.min.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/jquery.color.min.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/bootstrap.min.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/longtable.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/jquery.jeditable.min.js" $ mempty
+            script ! A.type_ "text/javascript" ! src "/sproxy/static/js/utils.js" $ mempty
 
         body $ do
 
@@ -57,16 +57,16 @@ pageT t cont = do
                     H.span ! A.class_ "icon-bar" $ mempty
                     H.span ! A.class_ "icon-bar" $ mempty
                     H.span ! A.class_ "icon-bar" $ mempty
-                  H.a ! A.class_ "navbar-brand" ! A.href "/" $ "sproxy-web"
+                  H.a ! A.class_ "navbar-brand" ! A.href "/sproxy/" $ "sproxy-web"
 
                 H.div ! A.class_ "collapse navbar-collapse" $ do
                   H.ul ! A.class_ "nav navbar-nav" $ do
-                    H.li ! class_ {- "active" -} "" $ H.a ! A.href "/" $ "Home"
-                    H.li ! A.id "animat-gr" $ H.a ! A.href "/groups" $ "Groups and users"
-                    H.li ! A.id "animat-do" $ H.a ! A.href "/domains" $ "Domains and privileges"
+                    H.li ! class_ {- "active" -} "" $ H.a ! A.href "/sproxy/" $ "Home"
+                    H.li ! A.id "animat-gr" $ H.a ! A.href "/sproxy/groups" $ "Groups and users"
+                    H.li ! A.id "animat-do" $ H.a ! A.href "/sproxy/domains" $ "Domains and privileges"
 
                   H.form ! A.id "searchform" ! A.class_ "navbar-form navbar-right"
-                         ! A.method "POST"   ! A.action "/search" $
+                         ! A.method "POST"   ! A.action "/sproxy/search" $
                     H.input ! A.type_ "text"
                             ! A.name  "search_query"
                             ! A.class_ "form-control"

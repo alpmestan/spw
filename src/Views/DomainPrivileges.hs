@@ -88,7 +88,7 @@ domainPrivilegesT domain privileges groups groupPrivs =
                     "An error occured when trying to update the privileges in the DB."
 
         H.script ! A.type_ "text/javascript"
-                 ! A.src "/static/js/domainprivileges.js" $ mempty
+                 ! A.src "/sproxy/static/js/domainprivileges.js" $ mempty
 
     where privToHtml p = do
               tr $ do
