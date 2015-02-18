@@ -35,7 +35,7 @@ $('.rule-btn').click(function() {
     var hisTr = $(this).parent().parent();
     var privilege = $(hisTr).children("td").eq(0).text();
 
-    window.location = '/domain/' + domain + '/privilege/' + privilege + '/rules';
+    window.location = '/sproxy/domain/' + domain + '/privilege/' + privilege + '/rules';
 });
 
 function sendPrivilege(privilegeField, onSucc, onErr, addRow) {
@@ -78,7 +78,7 @@ function appendRow( privilegeField, addRow)
         var hisTr  = $(this).parent().parent();
         var privilege = $(hisTr).children("td").eq(0).text();
 
-        window.location = '/domain/' + domain + '/privilege/' + privilege + '/rules';
+        window.location = '/sproxy/domain/' + domain + '/privilege/' + privilege + '/rules';
     });
 }
 
@@ -94,7 +94,7 @@ function arrayDiff(array1, array2)
 // we refresh groups/privileges every 5 seconds
 var refreshRate = 1000;
 
-var groupsUrl = '/groups.json';
+var groupsUrl = '/sproxy/groups.json';
 
 function getGroups()
 {
@@ -119,7 +119,7 @@ function removeGroupOption(groupName)
     $('#groupSel option[value="' + groupName + '"]').remove();
 }
 
-var privsUrl = '/domain/' + domain + '/privileges.json';
+var privsUrl = '/sproxy/domain/' + domain + '/privileges.json';
 
 function getPrivileges()
 {
@@ -158,7 +158,7 @@ $('#groupSel').focusin(function() {
 setInterval(getGroups, refreshRate);
 setInterval(getPrivileges, refreshRate);
 
-var gpUrl = '/domain/' + domain + '/group_privileges'
+var gpUrl = '/sproxy/domain/' + domain + '/group_privileges'
 
 $('.grant-btn').click(function() {
     var currRow = $(this).parent().parent();

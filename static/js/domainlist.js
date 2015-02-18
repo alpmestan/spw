@@ -35,7 +35,7 @@ $('.privileges-btn').click(function() {
     var hisTr = $(this).parent().parent();
     var domain = $(hisTr).children("td").eq(0).text();
 
-    window.location = '/domain/' + domain + '/privileges';
+    window.location = '/sproxy/domain/' + domain + '/privileges';
 });
 
 function sendDomain(domainField, onSucc, onErr, addRow) {
@@ -78,6 +78,6 @@ function appendRow(domainField, addRow)
         var hisTr  = $(this).parent().parent();
         var domain = $(hisTr).children("td").eq(0).text();
 
-        window.location = '/domain/' + domain + '/privileges';
+        window.location = '/sproxy/domain/' + domain + '/privileges';
     });
 }

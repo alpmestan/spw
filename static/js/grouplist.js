@@ -35,7 +35,7 @@ $('.member-btn').click(function() {
     var hisTr = $(this).parent().parent();
     var group = $(hisTr).children("td").eq(0).text();
 
-    window.location = '/group/' + group + '/members';
+    window.location = '/sproxy/group/' + group + '/members';
 });
 
 function sendGroup(groupField, onSucc, onErr, addRow) {
@@ -78,6 +78,6 @@ function appendRow(groupField, addRow)
         var hisTr = $(this).parent().parent();
         var group = $(hisTr).children("td").eq(0).text();
 
-        window.location = '/group/' + group + '/members';
+        window.location = '/sproxy/group/' + group + '/members';
     });
 }
